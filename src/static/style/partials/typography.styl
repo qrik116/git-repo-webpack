@@ -1,0 +1,107 @@
+setColor('black-10')
+
+a
+    text-decoration: underline
+    outline: none
+    transition color 0.2s ease-in-out
+    color inherit
+    &:hover,
+    &:focus
+        transition-duration 0s
+        text-decoration: none
+
+// object-fit polyfill (for img)
+img
+    pointer-events none
+    user-select none
+    max-width 100%
+    &[data-object-fit="contain"]
+        object-fit contain
+    &[data-object-fit="cover"]
+        object-fit cover
+
+p
+    margin 1em 0
+    
+.f-bold
+    font-weight 700
+.f-medium
+    font-weight 500
+.f-normal
+    font-weight 400
+
+h1
+    font-size 50px
+    font-weight 700
+    margin .4em 0
+    line-height 1.25
+    display block
+    @media(max-width $screen-sm-max)
+        font-size 35px
+    @media(max-width $screen-xs-max)
+        margin .6em 0
+
+.h1
+    @extend h1
+    
+h2, .h2
+    font-size 40px
+    font-weight 700
+    margin .3em 0
+    line-height 1.25
+    display block
+    @media(max-width $screen-sm-max)
+        font-size 30px
+    @media(max-width $screen-xs-max)
+        margin .5em 0
+
+h3, .h3
+    font-size 30px
+    font-weight 700
+    margin .6em 0
+    display block
+    @media(max-width $screen-sm-max)
+        font-size 25px
+    @media(max-width $screen-xs-max)
+        margin .7em 0
+    
+h4, .h4
+    font-size 20px
+    font-weight 700
+    margin .6em 0
+    display block
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    /*
+     * Extends the .visuallyhidden class to allow the element
+     * to be focusable when navigated to via the keyboard:
+     * https://www.drupal.org/node/897638
+     */
+
+    &__focusable:active
+    &__focusable:focus
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
