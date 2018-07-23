@@ -1,5 +1,5 @@
 # Frontend Webpack 4 Kit
-### PUG(html) + Stylus(css) + JS(Babel) + React
+### React + Stylus
 ## Installing:
 
 ``` console
